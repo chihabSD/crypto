@@ -4,10 +4,15 @@ const useRedux = () => {
   const state = useSelector((state) => state);
   const {
     tabReducer: { isTradeModalVisible },
+    marketReducer: { myHoldings, coins, error, loading },
   } = state;
   return {
     dispatch,
     isTradeModalVisible,
+    myHoldings,
+    coins,
+    error,
+    loading,
   };
 };
 
