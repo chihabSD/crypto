@@ -1,1 +1,1 @@
-# Cryto wallet app in react native with with api
+# Cryto wallet app in react native with api
