@@ -1,15 +1,13 @@
-import React from 'react';
-import {
-    View,
-    Text
-} from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
+import { MainLayout } from ".";
 
 const Home = () => {
-    return (
-        <View>
-            <Text>Home</Text>
-        </View>
-    )
-}
+  return (
+    <MainLayout>
+      <Text>Home</Text>
+    </MainLayout>
+  );
+};
 
 export default Home;

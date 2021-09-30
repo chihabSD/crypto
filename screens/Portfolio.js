@@ -1,15 +1,13 @@
-import React from 'react';
-import {
-    View,
-    Text
-} from 'react-native';
+import React from "react";
+import { View, Text } from "react-native";
+import { MainLayout } from ".";
 
 const Portfolio = () => {
-    return (
-        <View>
-            <Text>Portfolio</Text>
-        </View>
-    )
-}
+  return (
+    <MainLayout>
+      <Text>Portfolio</Text>
+    </MainLayout>
+  );
+};
 
 export default Portfolio;
