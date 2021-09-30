@@ -7,6 +7,7 @@ import { COLORS, icons } from "../constants";
 import TabIcon from "../components/TabIcon";
 import { useRedux } from "../hooks/useRedux";
 // import { TabIcon } from "../components";
+import { _setTradeActionVisbility } from "../redux/actions/tab/setTradeModalVisiblity";
 const Tab = createBottomTabNavigator();
 const CustomBarButton = ({ children, onPress }) => {
   return (
@@ -20,6 +21,7 @@ const CustomBarButton = ({ children, onPress }) => {
 };
 const Tabs = () => {
   const { dispatch, isTradeModalVisible } = useRedux();
+
   return (
     <Tab.Navigator
       tabBarOptions={{
@@ -36,7 +38,18 @@ const Tabs = () => {
         component={Home}
         options={{
           tabBarIcon: ({ focused }) => {
-            return <TabIcon focused={focused} label="home" icon={icons.home} />;
+            if (!isTradeModalVisible) {
+              return (
+                <TabIcon focused={focused} label="home" icon={icons.home} />
+              );
+            }
+          },
+        }}
+        listeners={{
+          tabPress: (e) => {
+            if (isTradeModalVisible) {
+              e.preventDefault();
+            }
           },
         }}
       />
@@ -45,13 +58,22 @@ const Tabs = () => {
         component={Portfolio}
         options={{
           tabBarIcon: ({ focused }) => {
-            return (
-              <TabIcon
-                focused={focused}
-                label="portfiolio"
-                icon={icons.briefcase}
-              />
-            );
+            if (!isTradeModalVisible) {
+              return (
+                <TabIcon
+                  focused={focused}
+                  label="portfiolio"
+                  icon={icons.briefcase}
+                />
+              );
+            }
+          },
+        }}
+        listeners={{
+          tabPress: (e) => {
+            if (isTradeModalVisible) {
+              e.preventDefault();
+            }
           },
         }}
       />
@@ -62,17 +84,22 @@ const Tabs = () => {
           tabBarIcon: ({ focused }) => {
             return (
               <TabIcon
-                focused={focused}
-                label="trade"
-                icon={icons.trade}
                 isTrade={true}
+                focused={focused}
+                label="Trade"
+                iconStyle={
+                  isTradeModalVisible ? { width: 15, height: 15 } : null
+                }
+                icon={isTradeModalVisible ? icons.close : icons.trade}
               />
             );
           },
           tabBarButton: (props) => (
             <CustomBarButton
               {...props}
-              onPress={() => console.warn("custom btn")}
+              onPress={() =>
+                dispatch(_setTradeActionVisbility(!isTradeModalVisible))
+              }
             />
           ),
         }}
@@ -82,9 +109,18 @@ const Tabs = () => {
         component={Market}
         options={{
           tabBarIcon: ({ focused }) => {
-            return (
-              <TabIcon focused={focused} label="market" icon={icons.market} />
-            );
+            if (!isTradeModalVisible) {
+              return (
+                <TabIcon focused={focused} label="market" icon={icons.market} />
+              );
+            }
+          },
+        }}
+        listeners={{
+          tabPress: (e) => {
+            if (isTradeModalVisible) {
+              e.preventDefault();
+            }
           },
         }}
       />
@@ -93,9 +129,22 @@ const Tabs = () => {
         component={Profile}
         options={{
           tabBarIcon: ({ focused }) => {
-            return (
-              <TabIcon focused={focused} label="profile" icon={icons.profile} />
-            );
+            if (!isTradeModalVisible) {
+              return (
+                <TabIcon
+                  focused={focused}
+                  label="profile"
+                  icon={icons.profile}
+                />
+              );
+            }
+          },
+        }}
+        listeners={{
+          tabPress: (e) => {
+            if (isTradeModalVisible) {
+              e.preventDefault();
+            }
           },
         }}
       />

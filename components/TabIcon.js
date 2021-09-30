@@ -21,13 +21,13 @@ const TabIcon = ({ focused, icon, iconStyle, label, isTrade }) => {
           style={{
             width: 25,
             height: 25,
-            tintColor: focused ? COLORS.white : COLORS.secondary,
+            tintColor: COLORS.white,
             ...iconStyle,
           }}
         />
         <Text
           style={{
-            color: focused ? COLORS.white : COLORS.secondary,
+            color: COLORS.white,
             ...FONTS.h4,
           }}
         >
