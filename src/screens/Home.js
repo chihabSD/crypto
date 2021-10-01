@@ -1,5 +1,7 @@
+import React, { useCallback } from "react";
+import { FlatList, Text, View, TouchableOpacity, Image } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
-import React, { useCallback, useEffect } from "react";
+
 import { MainLayout } from ".";
 import BalanceInfo from "../components/BalanceInfo";
 import IconTextButton from "../components/IconTextButton";
@@ -7,28 +9,15 @@ import { SIZES, dummyData, COLORS, icons, FONTS } from "../constants";
 import { useRedux } from "../hooks/useRedux";
 import { getHoldings } from "../redux/actions/market/getHoldings";
 import { getCoinMarket } from "../redux/actions/market/getMarket";
-import {
-  Dimensions,
-  FlatList,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-} from "react-native";
-import {
-  ChartDot,
-  ChartPath,
-  ChartPathProvider,
-  monotoneCubicInterpolation,
-} from "@rainbow-me/animated-charts";
 import Chart from "../components/Chart";
 
-export const { width: SIZE } = Dimensions.get("window");
-
 const Home = () => {
-  //   console.warn(dummyData.holdings);
+  // Hooks
   const { dispatch, coins, myHoldings } = useRedux();
+  // State
+  const [selectedCoin, setSelectedCoin] = React.useState(null);
 
+  // useEffects and callbacks
   useFocusEffect(
     useCallback(() => {
       dispatch(getHoldings((holdings = dummyData.holdings)));
@@ -37,7 +26,6 @@ const Home = () => {
   );
 
   // Calculate total of wallet
-
   let totalWallet = myHoldings.reduce((a, b) => a + (b.total || 0), 0);
   let valueChange = myHoldings.reduce(
     (a, b) => a + (b.holding_value_change_7d || 0),
@@ -45,6 +33,7 @@ const Home = () => {
   );
   let percChange = (valueChange / (totalWallet - valueChange)) * 100;
 
+  // Method to render wallet info section
   const renderWwalletInfoSection = () => {
     return (
       <View
@@ -89,11 +78,20 @@ const Home = () => {
   return (
     <MainLayout>
       <View style={{ flex: 1, backgroundColor: COLORS.black }}>
+        {/* Render wallet info */}
         {renderWwalletInfoSection()}
+
+        {/* Chart */}
         <Chart
           containerStyle={{ marginTop: SIZES.padding * 2 }}
-          chartPrices={coins[0]?.sparkline_in_7d?.price}
+          chartPrices={
+            selectedCoin
+              ? selectedCoin?.sparkline_in_7d?.price
+              : coins[0]?.sparkline_in_7d?.price
+          }
         />
+
+        {/* Top Cryptocurrency section */}
         <FlatList
           data={coins}
           keyExtractor={(item) => item.id}
