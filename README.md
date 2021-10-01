@@ -9,7 +9,7 @@ It's made with [coingecko](https://www.coingecko.com/en) as an api with [React N
 
 ## Table of Contents
 
-- [Main technologies used](#main_technologies_used)
+- [Main technologies used]
 - [Idea inspiration](#idea_inspiration)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
