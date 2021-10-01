@@ -10,6 +10,9 @@ It's made with [coingecko](https://www.coingecko.com/en) as an api with [React N
 ## Table of Contents
 
 - [Main technologies used](#main_tech_used)
+
+* [Updating to New Releases](#updating-to-new-releases)
+
 - [Idea inspiration](#idea_inspiration)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
@@ -32,6 +35,10 @@ It's made with [coingecko](https://www.coingecko.com/en) as an api with [React N
   - [Networking](#networking)
   - [iOS Simulator won't open](#ios-simulator-wont-open)
   - [QR Code does not scan](#qr-code-does-not-scan)
+
+## Updating to New Releases
+
+You should only need to update the global installation of `create-react-native-app` very rarely, ideally never.
 
 ## Idea inspiration
 
