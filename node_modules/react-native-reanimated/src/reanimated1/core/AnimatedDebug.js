@@ -1,4 +1,4 @@
-import invariant from 'invariant';
+import invariant from 'fbjs/lib/invariant';
 import { NativeModules } from 'react-native';
 import { val } from '../val';
 import { adapt, createAnimatedBlock as block } from './AnimatedBlock';

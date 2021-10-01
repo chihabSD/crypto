@@ -2,7 +2,7 @@ import AnimatedNode from './AnimatedNode';
 import { createAnimatedCallFunc } from './AnimatedCallFunc';
 import { createAnimatedParam } from './AnimatedParam';
 import { val } from '../val';
-import invariant from 'invariant';
+import invariant from 'fbjs/lib/invariant';
 
 class AnimatedFunction extends AnimatedNode {
   _what;

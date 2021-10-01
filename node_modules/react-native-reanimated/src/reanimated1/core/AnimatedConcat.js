@@ -1,4 +1,4 @@
-import invariant from 'invariant';
+import invariant from 'fbjs/lib/invariant';
 import { adapt } from '../core/AnimatedBlock';
 import AnimatedNode from './AnimatedNode';
 import { val } from '../val';

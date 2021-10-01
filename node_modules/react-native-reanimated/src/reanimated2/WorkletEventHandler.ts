@@ -1,57 +1,38 @@
-import { NativeEvent } from './commonTypes';
-import NativeReanimatedModule from './NativeReanimated';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+import NativeModule from './NativeReanimated';
 
-function jsListener<T extends NativeEvent<T>>(
-  eventName: string,
-  handler: (event: T) => void
-) {
-  return (evt: T) => {
-    handler({ ...evt.nativeEvent, eventName });
-  };
-}
+const jsListener = (eventName, handler) => (evt) => {
+  handler({ ...evt.nativeEvent, eventName });
+};
 
-export default class WorkletEventHandler<T extends NativeEvent<T>> {
-  worklet: (event: T) => void;
-  eventNames: string[];
-  reattachNeeded: boolean;
-  listeners: Record<string, (event: T) => void>;
-  viewTag: number | undefined;
-  registrations: string[];
-  constructor(worklet: (event: T) => void, eventNames: string[] = []) {
+export default class WorkletEventHandler {
+  constructor(worklet, eventNames = []) {
     this.worklet = worklet;
     this.eventNames = eventNames;
     this.reattachNeeded = false;
-    this.listeners = {};
-    this.viewTag = undefined;
-    this.registrations = [];
 
-    if (!NativeReanimatedModule.native) {
-      this.listeners = eventNames.reduce(
-        (acc: Record<string, (event: T) => void>, eventName: string) => {
-          acc[eventName] = jsListener(eventName, worklet);
-          return acc;
-        },
-        {}
-      );
+    if (!NativeModule.native) {
+      this.listeners = eventNames.reduce((acc, eventName) => {
+        acc[eventName] = jsListener(eventName, worklet);
+        return acc;
+      }, {});
     }
   }
 
-  updateWorklet(newWorklet: (event: T) => void): void {
+  updateWorklet(newWorklet) {
     this.worklet = newWorklet;
     this.reattachNeeded = true;
   }
 
-  registerForEvents(viewTag: number, fallbackEventName?: string): void {
+  registerForEvents(viewTag, fallbackEventName = undefined) {
     this.viewTag = viewTag;
     this.registrations = this.eventNames.map((eventName) =>
-      NativeReanimatedModule.registerEventHandler(
-        viewTag + eventName,
-        this.worklet
-      )
+      NativeModule.registerEventHandler(viewTag + eventName, this.worklet)
     );
     if (this.registrations.length === 0 && fallbackEventName) {
       this.registrations.push(
-        NativeReanimatedModule.registerEventHandler(
+        NativeModule.registerEventHandler(
           viewTag + fallbackEventName,
           this.worklet
         )
@@ -59,10 +40,11 @@ export default class WorkletEventHandler<T extends NativeEvent<T>> {
     }
   }
 
-  unregisterFromEvents(): void {
-    this.registrations.forEach((id) =>
-      NativeReanimatedModule.unregisterEventHandler(id)
-    );
-    this.registrations = [];
+  unregisterFromEvents() {
+    this.registrations &&
+      this.registrations.forEach((id) =>
+        NativeModule.unregisterEventHandler(id)
+      );
+    this.registrations = undefined;
   }
 }

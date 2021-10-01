@@ -1,7 +1,7 @@
 import AnimatedNode from './AnimatedNode';
 import AnimatedClock from './AnimatedClock';
 import { AnimatedParam } from './AnimatedParam';
-import invariant from 'invariant';
+import invariant from 'fbjs/lib/invariant';
 
 class AnimatedStartClock extends AnimatedNode {
   _clockNode;

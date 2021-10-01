@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 import AnimatedNode from './AnimatedNode';
 import { createOrReuseTransformNode } from './AnimatedTransform';
 
-import deepEqual from 'lodash.isequal';
+import deepEqual from 'fbjs/lib/areEqual';
 
 function sanitizeStyle(inputStyle) {
   let style;

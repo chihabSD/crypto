@@ -1,4 +1,4 @@
-import invariant from 'invariant';
+import invariant from 'fbjs/lib/invariant';
 import { val } from '../val';
 import AnimatedNode from './AnimatedNode';
 import InternalAnimatedValue from './InternalAnimatedValue';
