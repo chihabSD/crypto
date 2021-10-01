@@ -1,8 +1,9 @@
-# Cryto wallet
-
-# coingecko + React Native app
+# coingecko api + React Native app
 
 Using [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/).
+
+I have done this application for a school project and wanted to try to do a mobile app in using web technologies I am familiar with.
+This app is made to be simple and may help people knowing React & Redux to get into creating mobile apps. It's made with [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/), coupled with Redux [Redux](https://react-redux.js.org/), [Navigation5(https://reactnavigation.org/)], dataflow and UI elements. The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-Wallet)]
 
 ## Setup
 
