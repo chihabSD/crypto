@@ -27,7 +27,60 @@ The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-W
 
 > React Native Navigation API
 
-## Try The App
+##### Installation
+
+```
+$ npm install
+```
+
+##### Then to run for iOS
+
+```
+$ cd ios && pod install
+$ npx react-native link
+$ react-native run-ios
+```
+
+##### For Android
+
+```
+$ react-native run-android
+```
+
+# Explanation of React-Native-Navigation Wix with Redux
+
+```
+/src
+  --/components
+        BalanceInfo.js
+        Chart.js
+        IconTextButton.js
+        index.js
+        TabIcon.js
+  --/constans
+        constants.js
+        dummy.js
+        icons.js
+        index.js
+        theme.js
+  --/hooks
+     useRedux.js
+  --/navigation
+     tabs.js
+  --/redux
+     actions
+     reducers
+     store.js
+  --/screens
+      Home.js
+      index.js
+      MainLayout.js
+      Market.js
+      Portfolio.js
+      Profile.js
+ App.js
+
+```
 
 ### Android
 
