@@ -86,8 +86,9 @@ $ react-native run-android
 ```
 
 <p align="center">
-  <img src="./assets/screenshots/home.png" width="300" title="hover text">
-  <img src="./assets/screenshots/trade.png" width="300" title="hover text">
-  <img src="./assets/screenshots/market.png" width="300" title="hover text">
-  <img src="./assets/screenshots/profile.png" width="300" title="hover text">
+  <img src="./assets/screenshots/home.png" width="300" title="home">
+  <img src="./assets/screenshots/portfolio.png" width="300" title="portfolio">
+  <img src="./assets/screenshots/trade.png" width="300" title="trade">
+  <img src="./assets/screenshots/market.png" width="300" title="market">
+  <img src="./assets/screenshots/profile.png" width="300" title="profile">
 </p>
