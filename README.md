@@ -56,6 +56,7 @@ $ react-native run-android
   --/components
         BalanceInfo.js
         Chart.js
+        HeaderBar.js
         IconTextButton.js
         index.js
         TabIcon.js

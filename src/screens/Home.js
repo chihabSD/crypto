@@ -7,9 +7,11 @@ import BalanceInfo from "../components/BalanceInfo";
 import IconTextButton from "../components/IconTextButton";
 import { SIZES, dummyData, COLORS, icons, FONTS } from "../constants";
 import { useRedux } from "../hooks/useRedux";
-import { getHoldings } from "../redux/actions/market/getHoldings";
+// import { getHoldings } from "../redux/actions/market/getHoldings";
 import { getCoinMarket } from "../redux/actions/market/getMarket";
 import Chart from "../components/Chart";
+import { getHoldings } from "../redux/actions/market/getHoldings";
+// import Chart from "../components/Chart";
 
 const Home = () => {
   // Hooks
