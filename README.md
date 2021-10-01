@@ -16,18 +16,19 @@ It's made with [coingecko](https://www.coingecko.com/en) as an api with [React N
   - [npm run ios](#npm-run-ios)
   - [npm run android](#npm-run-android)
   - [npm run eject](#npm-run-eject)
-- [Writing and Running Tests](#writing-and-running-tests)
-- [Environment Variables](#environment-variables)
+
+* [Writing and Running Tests](#writing-and-running-tests)
+* [Environment Variables](#environment-variables)
   - [Configuring Packager IP Address](#configuring-packager-ip-address)
-- [Adding Flow](#adding-flow)
-- [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
-- [Sharing and Deployment](#sharing-and-deployment)
+* [Adding Flow](#adding-flow)
+* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
+* [Sharing and Deployment](#sharing-and-deployment)
   - [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
   - [Building an Expo "standalone" app](#building-an-expo-standalone-app)
   - [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
     - [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
     - [Should I Use ExpoKit?](#should-i-use-expokit)
-- [Troubleshooting](#troubleshooting)
+* [Troubleshooting](#troubleshooting)
   - [Networking](#networking)
   - [iOS Simulator won't open](#ios-simulator-wont-open)
   - [QR Code does not scan](#qr-code-does-not-scan)
@@ -46,13 +47,11 @@ The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-W
 
 > Redux is a predictable state container for JavaScript apps.
 
-- [React Native Elements](https://github.com/react-native-community/react-native-elements)
-
 > Backend api
 
 - [coingecko](https://www.coingecko.com/en)
 
-> React Native Router based on new React Native Navigation API
+> React Native Navigation API
 
 ## Try The App
 
