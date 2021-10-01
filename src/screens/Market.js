@@ -39,7 +39,7 @@ const TabIndicator = ({ measureLayout, scrollX }) => {
         height: "100%",
         width: (SIZES.width - SIZES.radius * 2) / 2,
         borderRadius: SIZES.radius,
-        backgroundColor: COLORS.lightGray,
+        backgroundColor: COLORS.primary,
         transform: [
           {
             translateX,

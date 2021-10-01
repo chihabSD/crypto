@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { COLORS, FONTS, SIZES } from "../constants";
 
-const IconTextButton = ({ label, icon, containerStyle, onPress }) => {
+const IconTextButton = ({ label, icon, containerStyle, onPress, bg }) => {
   return (
     <TouchableOpacity
       style={{
@@ -11,7 +11,7 @@ const IconTextButton = ({ label, icon, containerStyle, onPress }) => {
         height: 50,
         justifyContent: "center",
         borderRadius: SIZES.radius,
-        backgroundColor: COLORS.white,
+        backgroundColor: bg ? bg : COLORS.primary,
         ...containerStyle,
       }}
       onPress={onPress}
@@ -19,9 +19,23 @@ const IconTextButton = ({ label, icon, containerStyle, onPress }) => {
       <Image
         source={icon}
         resizeMode="contain"
-        style={{ height: 20, width: 20 }}
+        style={{
+          height: 20,
+          tintColor: bg ? COLORS.secondary : COLORS.black,
+          width: 20,
+        }}
       />
-      <Text style={{ marginLeft: SIZES.base, ...FONTS.h3 }}>{label}</Text>
+      <Text
+        style={{
+          marginLeft: SIZES.base,
+          ...FONTS.h3,
+
+          color: bg ? COLORS.secondary : COLORS.black,
+          //  color: COLORS.white
+        }}
+      >
+        {label}
+      </Text>
     </TouchableOpacity>
   );
 };

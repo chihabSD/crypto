@@ -5,7 +5,9 @@ import { COLORS, FONTS, icons, SIZES } from "../constants";
 const BalanceInfo = ({ title, displayAmount, changePct, containerStyle }) => {
   return (
     <View style={{ ...containerStyle }}>
-      <Text style={{ color: COLORS.lightGray3, ...FONTS.h3 }}>{title}</Text>
+      <Text style={{ color: COLORS.primary, ...FONTS.h1, marginBottom: 10 }}>
+        {title}
+      </Text>
 
       <View style={{ flexDirection: "row", alignItems: "flex-end" }}>
         <Text style={{ color: COLORS.lightGray3, ...FONTS.h3 }}>$</Text>
@@ -25,7 +27,7 @@ const BalanceInfo = ({ title, displayAmount, changePct, containerStyle }) => {
               width: 10,
               height: 10,
               alignSelf: "center",
-              tintColor: changePct > 0 ? COLORS.lightGreen : COLORS.red,
+              tintColor: changePct > 0 ? COLORS.green : COLORS.red,
               transform:
                 changePct > 0 ? [{ rotate: "45deg" }] : [{ rotate: "125deg" }],
             }}
@@ -38,9 +40,9 @@ const BalanceInfo = ({ title, displayAmount, changePct, containerStyle }) => {
             alignSelf: "flex-end",
             color:
               changePct == 0
-                ? COLORS.lightGray3
+                ? COLORS.green
                 : changePct > 0
-                ? COLORS.lightGreen
+                ? COLORS.green
                 : COLORS.red,
           }}
         >

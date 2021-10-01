@@ -23,7 +23,7 @@ The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-W
 
 > Backend api
 
-- [coingecko](https://www.coingecko.com/en)
+- [coingecko](https://www.coingecko.com/en))
 
 > React Native Navigation API
 
@@ -84,3 +84,7 @@ $ react-native run-android
  App.js
 
 ```
+
+<p align="center">
+  <img src="./assets/screenshots/home.png" width="350" title="hover text">
+</p>

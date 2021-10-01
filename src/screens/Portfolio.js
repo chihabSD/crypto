@@ -8,6 +8,7 @@ import { COLORS, dummyData, FONTS, icons, SIZES } from "../constants";
 import { useRedux } from "../hooks/useRedux";
 import { getHoldings } from "../redux/actions/market/getHoldings";
 import { isIphoneX } from "react-native-iphone-x-helper";
+import HeaderBar from "../components/HeaderBar";
 const Portfolio = () => {
   // states
   const [selectedCoin, setSelectedCoin] = useState(null);
@@ -47,7 +48,7 @@ const Portfolio = () => {
           backgroundColor: COLORS.gray,
         }}
       >
-        <Text
+        {/* <Text
           style={{
             marginTop: isIphoneX() ? 50 : 20,
             color: COLORS.white,
@@ -55,7 +56,7 @@ const Portfolio = () => {
           }}
         >
           Portfolio
-        </Text>
+        </Text> */}
 
         <BalanceInfo
           title="Current Balance"
@@ -77,6 +78,7 @@ const Portfolio = () => {
           backgroundColor: COLORS.black,
         }}
       >
+        <HeaderBar title="Portfolio" />
         {/* Header - Current Balance */}
         {renderCurrentBalanceSection()}
 

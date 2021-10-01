@@ -11,6 +11,8 @@ const HeaderBar = ({ title }) => {
         height: isIphoneX() ? 100 : 70,
         paddingHorizontal: SIZES.radius,
         justifyContent: "flex-end",
+        backgroundColor: COLORS.primary,
+        // marginBottom: 13,
       }}
     >
       <Text style={{ color: COLORS.white, ...FONTS.largeTitle }}>{title}</Text>

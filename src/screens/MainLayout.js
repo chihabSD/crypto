@@ -58,10 +58,12 @@ const MainLayout = ({ children }) => {
         <IconTextButton
           label="Transfer"
           icon={icons.send}
+          bg={COLORS.white}
           onPress={() => console.warn("sssss")}
         />
         <IconTextButton
           label="Withdraw"
+          bg={COLORS.white}
           icon={icons.withdraw}
           onPress={() => console.warn("sssss")}
           containerStyle={{ marginTop: SIZES.base }}

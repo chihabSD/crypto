@@ -78,7 +78,11 @@ const Setting = ({ title, value, type, onPress }) => {
         <Text style={{ flex: 1, color: COLORS.white, ...FONTS.h3 }}>
           {title}
         </Text>
-        <Switch value={value} onValueChange={(value) => onPress(value)} />
+        <Switch
+          trackColor={{ true: COLORS.primary, false: "yellow" }}
+          value={value}
+          onValueChange={(value) => onPress(value)}
+        />
       </View>
     );
   }
@@ -143,7 +147,7 @@ const Profile = () => {
               <Text
                 style={{
                   marginLeft: SIZES.base,
-                  color: COLORS.lightGreen,
+                  color: COLORS.green,
                   ...FONTS.body4,
                 }}
               >
