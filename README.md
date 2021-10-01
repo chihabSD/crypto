@@ -2,15 +2,15 @@
 
 Using [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/).
 
-I have done this application for a school project and wanted to try to do a mobile app in using web technologies I am familiar with.
-This app is made to be simple and may help people knowing React & Redux to get into creating mobile apps. It's made with [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/), coupled with Redux [Redux](https://react-redux.js.org/), [Navigation5(https://reactnavigation.org/)], dataflow and UI elements. The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-Wallet)]
+I have done this application for a personal project and wanted to try an improve my development skills when it comes to react ecosystem and to be more familiar and comfortable witha tech that I am already familiar with.
+This app is made to be simple and may help people knowing React & Redux to get into creating mobile apps.
 
-## Setup
+It's made with [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/), coupled with Redux [Redux](https://react-redux.js.org/), [Navigation5(https://reactnavigation.org/)], dataflow and UI elements.
 
-<!-- ## Table of Contents
+## Table of Contents
 
-- [Updating to New Releases](#updating-to-new-releases)
-- [Available Scripts](#available-scripts)
+- [Main technologies used](#main_tech_used)
+- [Idea inspiration](#idea_inspiration)
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run ios](#npm-run-ios)
@@ -31,7 +31,28 @@ This app is made to be simple and may help people knowing React & Redux to get i
   - [Networking](#networking)
   - [iOS Simulator won't open](#ios-simulator-wont-open)
   - [QR Code does not scan](#qr-code-does-not-scan)
- -->
+
+## Idea inspiration
+
+The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-Wallet)]
+
+## Main technologies used
+
+- [React Native](https://github.com/facebook/react-native)
+
+> A framework for building native apps with React.
+
+- [Redux](http://redux.js.org/)
+
+> Redux is a predictable state container for JavaScript apps.
+
+- [React Native Elements](https://github.com/react-native-community/react-native-elements)
+
+> Backend api
+
+- [coingecko](https://www.coingecko.com/en)
+
+> React Native Router based on new React Native Navigation API
 
 ## Try The App
 
