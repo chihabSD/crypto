@@ -7,32 +7,6 @@ This app is made to be simple and may help people knowing React & Redux to get i
 
 It's made with [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/), coupled with Redux [Redux](https://react-redux.js.org/), [Navigation5(https://reactnavigation.org/)], dataflow and UI elements.
 
-## Table of Contents
-
-- [Main technologies used](#main_technologies_used)
-- [Idea inspiration](#idea_inspiration)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run ios](#npm-run-ios)
-  - [npm run android](#npm-run-android)
-  - [npm run eject](#npm-run-eject)
-
-* [Writing and Running Tests](#writing-and-running-tests)
-* [Environment Variables](#environment-variables)
-  - [Configuring Packager IP Address](#configuring-packager-ip-address)
-* [Adding Flow](#adding-flow)
-* [Customizing App Display Name and Icon](#customizing-app-display-name-and-icon)
-* [Sharing and Deployment](#sharing-and-deployment)
-  - [Publishing to Expo's React Native Community](#publishing-to-expos-react-native-community)
-  - [Building an Expo "standalone" app](#building-an-expo-standalone-app)
-  - [Ejecting from Create React Native App](#ejecting-from-create-react-native-app)
-    - [Build Dependencies (Xcode & Android Studio)](#build-dependencies-xcode-android-studio)
-    - [Should I Use ExpoKit?](#should-i-use-expokit)
-* [Troubleshooting](#troubleshooting)
-  - [Networking](#networking)
-  - [iOS Simulator won't open](#ios-simulator-wont-open)
-  - [QR Code does not scan](#qr-code-does-not-scan)
-
 ## Idea inspiration
 
 The UI is inspired by [cryptoWaller(https://dribbble.com/shots/10834217-Crypto-Wallet)]
