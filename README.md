@@ -7,6 +7,14 @@ This app is made to be simple and may help people knowing React & Redux to get i
 
 It's made with [coingecko](https://www.coingecko.com/en) as an api with [React Native](https://facebook.github.io/react-native/), coupled with Redux [Redux](https://react-redux.js.org/), [Navigation5(https://reactnavigation.org/)], dataflow and UI elements.
 
+<p align="center">
+  <img src="./assets/screenshots/home.png" width="250" title="home">
+  <img src="./assets/screenshots/portfolio.png" width="250" title="portfolio">
+  <img src="./assets/screenshots/trade.png" width="250" title="trade">
+  <img src="./assets/screenshots/market.png" width="250" title="market">
+  <img src="./assets/screenshots/profile.png" width="250" title="profile">
+</p>
+
 #### Idea inspiration
 
 The UI is inspired by cryptoWaller, https://dribbble.com/shots/10834217-Crypto-Wallet
@@ -96,13 +104,3 @@ $ react-native run-android
 - react-native run-ios
 
 ```
-
-##### Screenshots
-
-<p align="center">
-  <img src="./assets/screenshots/home.png" width="300" title="home">
-  <img src="./assets/screenshots/portfolio.png" width="300" title="portfolio">
-  <img src="./assets/screenshots/trade.png" width="300" title="trade">
-  <img src="./assets/screenshots/market.png" width="300" title="market">
-  <img src="./assets/screenshots/profile.png" width="300" title="profile">
-</p>
