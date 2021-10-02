@@ -10,7 +10,7 @@ import { useRedux } from "../hooks/useRedux";
 // import { getHoldings } from "../redux/actions/market/getHoldings";
 import { getCoinMarket } from "../redux/actions/market/getMarket";
 import Chart from "../components/Chart";
-import { getHoldings } from "../redux/actions/market/getHoldings";
+import { getHoldings, test } from "../redux/actions/market/getHoldings";
 // import Chart from "../components/Chart";
 
 const Home = () => {
@@ -23,6 +23,7 @@ const Home = () => {
   useFocusEffect(
     useCallback(() => {
       dispatch(getHoldings((holdings = dummyData.holdings)));
+      // dispatch(test((holdings = dummyData.holdings)));
       dispatch(getCoinMarket());
     }, [])
   );
