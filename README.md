@@ -88,11 +88,14 @@ $ react-native run-android
 
 ##### Todos and things that can be added
 
+```
 $ addings authentication to node.js and get an actual user profile
 $ add App appearances (white mode)
 $ add language support
 $ handle account settings (password change)
 $ react-native run-ios
+
+```
 
 ##### Screenshots
 
